@@ -1,38 +1,31 @@
 # javascript-lab1-part1
 GS_07 - contact list - part 1, console output only
 
-## JAVASCRIPT ADDRESS BOOK LAB PART 1
-Task: Build an object-oriented console address book application.
+## JAVASCRIPT GAME LAB PART 1
+Task: Prompt the user if they would like to play the game with two characters - the user and
+the Almighty Grant. If yes, prompt the user to name their character. Run a while loop that will
+iterate until either the character has beat Grant three times or the character has been
+defeated.
 
-The AddressBook() class:
+What does the application do?
 
-Properties
-
-● contacts: an array of Contact instances. This is initialized with a few contacts in the
-constructor.
-
-Methods
-
-● add(info): Makes a new Contact instance and adds it to this AddressBook’s contacts.
-● deleteAt(index): Removes the contact at the given array index in this AddressBook’s
-contacts.
-● print(): Logs all of this AddressBook’s contacts to the console.
-
-The Contact class:
-
-The class has a name, email, phone, and relation property. All four can be set by passing
-them into the constructor.
+1. The user is prompted to play a game. If the user chooses yes, the user is prompted to
+enter his or her name, and the battle begins. Otherwise, nothing else happens.
+2. The game will use a while loop to simulate a turn-based fight between the user and
+Grant.
+3. The user starts with 40 “health points.” Grant starts with 10 “health points.”
+4. Each iteration of the while loop will remove random numbers of health points (either 1
+or 2) from both the user and Grant.
+5. Each time Grant’s health points hit 0, he is “defeated” and the user gains 1 “win.” But
+Grant’s health points are reset to 10. Note: the user’s health points never reset.
+6. The game ends when either a) Grant has been defeated three times (i.e.,, the user has
+three wins) or b) the user has been defeated (hit 0 health points).
+7. When the game is over, the application logs the winner.
 
 Build Specifications:
-1. Create the AddressBook and Contact classes. Create one instance of AddressBook.
-2. Write a loop to prompt the user whether they would like to add, delete, print, or quit.
-a. When the user chooses to add, prompt them for the four contact properties
-and call the AddressBook’s add method to add the new contact.
-b. When the user chooses to delete, prompt them for the index of the contact and
-call the AddressBook’s deleteAt method to remove the contact.
-c. When the user chooses to print, call the AddressBook’s print method.
-d. When the user chooses to quit, end the program.
 
-Bonus:
-Add a deleteByName method to AddressBook and use it in the loop. deleteByName(name)
-removes the contact with the given name from this AddressBook’s contacts.
+1. The application must prompt the user for his or her name and use it throughout the
+game.
+2. The application logs the progress of the fight after each iteration of the loop.
+3. Hint: Save asking the user if they want to play for the last part of the code you write.
+This way you won’t have to type “yes” every time you test your program.
